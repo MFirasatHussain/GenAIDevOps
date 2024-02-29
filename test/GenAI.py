@@ -19,6 +19,8 @@ def giveQuery(user):
     5. The name and email ids can be unique from the example I gave
     6. Do not deviate from the output format
     """
+
+    print(prompt)
     return prompt
 
 
