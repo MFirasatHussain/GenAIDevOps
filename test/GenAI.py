@@ -48,6 +48,7 @@ def update_test_cases_csv_simple(file_path, input_string):
 
 
 def parse_and_update(input_text, csv_file_path):
+    print(input_text)
     pattern = re.compile(r'<<<(.*?)>>>')
     matches = pattern.findall(input_text)
     with open(csv_file_path, 'a', newline='') as csvfile:
