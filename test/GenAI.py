@@ -1,11 +1,24 @@
 import csv
 import re
 import sys
-from api import key
 from openai import OpenAI
+def get_api_key(file_path):
+    try:
+        with open(file_path, 'r') as file:
+            api_key = file.readline().strip()
+        return api_key
+    except FileNotFoundError:
+        print("API key file not found.")
+        return None
+    except Exception as e:
+        print(f"An error occurred while reading the API key: {e}")
+        return None
+
+api_key_file_path = "D:/api.txt"  
+api_key = get_api_key(api_key_file_path)
+
 
 client = OpenAI(api_key=key)
-
 
 def giveQuery(user):
     prompt = f"""
