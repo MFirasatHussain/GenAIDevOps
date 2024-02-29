@@ -60,7 +60,7 @@ def parse_and_update(input_text, csv_file_path):
 
 if __name__ == "__main__":
     if len(sys.argv) > 1:
-        user = sys.argv[1]
+        user = ' '.join(sys.argv[1:])
     else:
         print("No argument provided.")
         user = "5 test cases"
