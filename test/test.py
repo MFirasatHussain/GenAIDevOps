@@ -2,6 +2,10 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.service import Service
 import csv  # Import CSV module to read the file
+from selenium import webdriver
+
+
+
 
 # Function to read test cases from CSV
 def read_test_cases(filename):
@@ -13,16 +17,16 @@ def read_test_cases(filename):
     return test_cases
 
 # Your existing Selenium setup
-submit_xpath = "//button[text()='Submit']"
-driver_path = "test/chromedriver"
-print(driver_path)
-service = Service(executable_path=driver_path)
-driver = webdriver.Chrome(service=service)
+# submit_xpath = "//button[text()='Submit']"
+# driver_path = "test/chromedriver"
+# print(driver_path)
+# service = Service(executable_path=driver_path)
+# driver = webdriver.Chrome(service=service)
 
 # Function to fill and submit the form for a single test case
 def submit_form(name, email):
-    base_url = 'http://127.0.0.1:5000/submit/'
-    driver.get(base_url)
+    driver = webdriver.Chrome()
+    driver.get("http://127.0.0.1:5000/submit/")
 
     name_input = driver.find_element(By.NAME, 'name')
     email_input = driver.find_element(By.NAME, 'email')
