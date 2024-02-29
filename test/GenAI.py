@@ -65,4 +65,5 @@ if __name__ == "__main__":
         print("No argument provided.")
         user = "5 test cases"
     filepath = "test_cases.csv"
+    print(user)
     parse_and_update(query_openai(giveQuery(user)), filepath)
