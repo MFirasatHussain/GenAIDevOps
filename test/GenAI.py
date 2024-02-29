@@ -11,11 +11,10 @@ def giveQuery(user):
     prompt = f"""
     Follow the steps:
     1. You are generating test cases for a web application.
-    2. The user's prompts are delimited by the backticks.
-    3. ```{user}```
-    4. The test cases should be of only two values in each - name and email id
-    4. Give output in a csv format only such as the angled delimiters shown:
+    2. The test cases should be of only two values in each - name and email id
+    3. Give output in a csv format only such as the angled delimiters shown:
     <<<testname, testname@gmail.com>>>
+    4. {user}
     5. The name and email ids can be unique from the example I gave
     6. Do not deviate from the output format
     """
