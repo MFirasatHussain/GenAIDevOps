@@ -14,7 +14,7 @@ def read_test_cases(filename):
 
 # Your existing Selenium setup
 submit_xpath = "//button[text()='Submit']"
-driver_path = "/usr/local/bin/chromedriver"
+driver_path = "test/chromedriver.exe"
 service = Service(executable_path=driver_path)
 driver = webdriver.Chrome(service=service)
 
