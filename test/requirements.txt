@@ -97,6 +97,7 @@ oauthlib==3.2.2
 opt-einsum==3.3.0
 outcome==1.3.0.post0
 overrides==7.4.0
+openai
 packaging==23.1
 pandas==2.1.1
 pandocfilters==1.5.0
