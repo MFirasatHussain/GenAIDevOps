@@ -15,7 +15,7 @@ def get_api_key(file_path):
         return None
 
 api_key_file_path = "D:/api.txt"  
-api_key = get_api_key(api_key_file_path)
+key = get_api_key(api_key_file_path)
 
 
 client = OpenAI(api_key=key)
